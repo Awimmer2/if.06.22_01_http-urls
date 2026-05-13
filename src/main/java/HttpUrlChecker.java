@@ -1,4 +1,5 @@
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /*
  * Copyright ©2018. Created by P. Bauer (p.bauer@htl-leonding.ac.at),
@@ -24,8 +25,9 @@ import java.util.regex.Matcher;
  * TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
 class HttpUrlChecker {
-
     public static Matcher getMatcher(String urlString) {
-        return null;
+        String regex = "https?://[a-z]+\\.[a-z]+";
+        Pattern pattern = Pattern.compile(regex);
+        return pattern.matcher(urlString);
     }
 }
